@@ -4,6 +4,7 @@ Team Project
 In this project, I worked on the chatbox feature and the overall front end of the pages.
 
 The following are screenshots of some pages from the app:
+\n
 ![Alt Text](chatbox-ss.png)
 
 ![Alt Text](login-ss.png)
