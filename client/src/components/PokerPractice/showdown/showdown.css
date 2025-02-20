@@ -1,0 +1,198 @@
+/* Showdown styling */
+.showdown-container--wrapper {
+	display: flex;
+   	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.89);
+	color: white;
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	z-index: 100;
+}
+
+.showdown-container--title {
+	font-size: 1.8em;
+	margin-top: .8em;
+	margin-bottom: .5em;
+}
+
+.showdown-container--messages {
+	font-size: 1.2em;
+	text-align: left;
+}
+
+.message--earnings,
+.message--rank,
+.message--player {
+	color: #FDBA0A;
+	font-weight: bold;
+}
+
+.showdown-container--community-card-label {
+	font-size: 1.4em;
+	margin-top: .8em;
+	margin-bottom: 0.5em;
+}
+
+.showdown-container--community-cards {
+	display: flex;
+	height: 120px;
+	user-select: none;
+}
+
+.showdown--nextRound--button {
+	background-color: #FDBA0A;
+	border-radius: 2em;
+	border: none;
+	color: whitesmoke;
+	padding: 1em 2em;
+	line-height: 1;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 1.5em;
+	margin-bottom: .8em;
+	transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.showdown--nextRound--button:hover {
+	color: rgb(156, 74, 19);
+ 	cursor: pointer;
+}
+
+.showdown--nextRound--button:hover {
+	cursor: pointer;
+}
+
+.player-showdown--entity { /* Game analysys - single row container */
+	display: flex;
+	margin-top: 1.2em;
+}
+
+.player-showdown-entity--container {
+    display: flex;
+}
+
+.player-showdown-info--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    width: 100px;
+    padding-top: 2em;
+}
+
+.player-showdown-info--name { /* Game analysis - single row - username heading */
+	border: 2px solid #FFFFFF;	
+	border-radius: .5em;
+	padding: .5em 0;
+	width: 100%;
+	color: #FDBA0A;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 1em;
+}
+
+.player-showdown--data,
+.player-showdown--privateCards  { /* Player hand - single cards */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1em;
+	user-select: none;
+}
+
+.player-showdown--cards { /* Player hand - cards container */
+	display: flex;
+}
+
+.player-showdown--besthand--container { /* Player best hand - cards container */
+	margin-right: 1em;
+}
+
+.player-showdown--cards--heading,
+.player-showdown--besthand--heading { /* Each player's hand and best hand headings */
+	font-size: 1.2em;
+	margin-bottom: .3em;
+}
+
+.player-showdown--besthand--cards { /* Player best hand - single cards */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+	user-select: none;
+}
+
+.showdown-handrank--container { /* Player best hand - rank container */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1em;
+	width: 110px;
+	padding-top: 2em;
+}
+
+.showdown-handrank-label { /* Player best hand - rank label */
+	border: 2px solid #FFFFFF;	
+	border-radius: .5em;
+	padding: .5em 0;
+	width: 100%;
+	color: #FDBA0A;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.player-showdown--earnings--container { /* Player chip earnings - container */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	padding-top: 2em;
+}
+
+.player-showdown--earnings { /* Player chip earnings - label */
+	border: 2px solid #FFFFFF;	
+	border-radius: .5em;
+	padding: .5em 0;
+	width: 100%;
+	color: #FDBA0A;
+	background-color: rgba(0,0,0,0.4);
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.player-showdown--earnings.positive { /* Player chip earnings - label POSITIVE EARNINGS */
+	color: #4EB04E;
+}
+
+.player-showdown--earnings.negative { /* Player chip earnings - label NEGATIVE EARNINGS */
+	color: #ff4646;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

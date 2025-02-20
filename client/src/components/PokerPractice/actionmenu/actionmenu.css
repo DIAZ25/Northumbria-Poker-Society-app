@@ -1,0 +1,73 @@
+/* 
+
+	Action menu CSS
+
+*/
+
+
+.game-action-bar {	/* Bottom bar with controls - container */
+	position: absolute;
+	overflow: hidden;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: space-around;
+	bottom: 0;
+	margin-bottom: 8em;
+ 	height: 120px;
+ 	color: white;
+	width: 100%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.action-buttons { /* Action buttons container */
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: space-around;
+ 	width: auto;
+ 	height: 70%;
+	margin-top: .3em;
+}
+
+.action-button { /* Call, check, bet or raise button */
+ 	height: inherit;
+ 	width: 130px;
+ 	margin-left: .5em;
+	border-radius: .3em;
+ 	font-size: 2.3em;
+ 	color: white;
+ 	background-color: #0bbd0b;
+ 	outline: none;
+ 	transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.action-button:hover {
+ 	cursor: pointer;
+ 	background-color: #ffc935;
+	color: rgb(156, 74, 19);
+}
+
+.fold-button { /* Fold button */
+	height: inherit;
+	width: 130px;
+    border-radius: .3em;
+	font-size: 2.3em;
+	color: white;
+	background-color: rgba(255, 80, 80, 0.8);
+	outline: none;
+	transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.fold-button:hover {
+ 	background-color: rgb(209, 0, 0);
+ 	cursor: pointer;
+}
+
+.slider-boi { /* Chip slider - action menu */
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 55%;
+	height: 100%;
+	margin-top: 50px;
+}

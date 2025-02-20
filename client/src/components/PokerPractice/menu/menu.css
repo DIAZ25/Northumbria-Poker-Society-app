@@ -1,0 +1,61 @@
+/*
+	Initial menu CSS
+*/
+
+.poker-menu-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.startgame--button {
+	background-color: #FDBA0A;
+	border-radius: 2em;
+	border: none;
+	color: whitesmoke;
+	padding: 1em 2em;
+	line-height: 1;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 1.5em;
+	margin-bottom: .8em;
+	transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.startgame--button:hover {
+	color: rgb(156, 74, 19);
+ 	cursor: pointer;
+}
+
+.startgame--button:hover {
+	cursor: pointer;
+}
+
+.number-bots-radiobuttons,
+.min-bet-radiobuttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.min-bet-radiobuttons:nth-child(2) {
+	margin-bottom: 1em;
+}
+
+.bot-radiobutton,
+.bet-radiobutton {
+	padding: 0 1em;
+}
+
+.bot-radiobutton label,
+.bet-radiobutton label {
+	display: flex;
+	flex-direction: column;
+}
+
+.poker-menu-container p {
+	padding-bottom: 1em;
+}

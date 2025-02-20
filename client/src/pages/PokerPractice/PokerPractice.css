@@ -1,0 +1,336 @@
+/*
+
+	General CSS file for the poker game page. 
+	Contains imports from all the other related
+	components' css files.
+
+*/
+
+@import url("../../components/PokerPractice/card/card.css");
+@import url("../../components/PokerPractice/player/player.css");
+
+@import url("../../components/PokerPractice/showdown/showdown.css");
+@import url("../../components/PokerPractice/actionmenu/actionmenu.css");
+@import url("../../components/PokerPractice/menu/menu.css");
+
+
+/* General */
+html,
+body, 
+#root,
+.PokerPractice {
+	width: 100%;
+	height: 100%;
+	user-select: none;
+	text-align: center;
+	
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Loading screen */
+.loading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.spinner-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 200px;
+	width: 200px;
+	animation: loading-spin infinite 3s linear;
+}
+
+@keyframes loading-spin {
+	from { transform: rotate(0deg);}
+	to { transform: rotate(360deg);
+	}
+}
+
+/* Board positioning and styling */
+.poker-table--wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #d1d5db;
+	/*background-image: radial-gradient(#eff8e2 60%, #d8e4c7 82%); */
+}
+
+.poker-app--background {
+	position: relative;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.poker-table--container {
+	position: absolute;
+	margin-top: 2em;
+}
+
+.community-card-container { /* Place where cards will be dealt on the board */
+	position: absolute;
+ 	display: flex;
+ 	justify-content: center;
+ 	top: calc(20% - 60px);
+ 	left: calc(50% - 225px);
+ 	width: auto;
+ 	height: auto;
+}
+
+ .pot-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	top: 45%;
+	left: calc(50% - 12px);
+	color: #1f2937;
+	font-size: 1.4em;
+}
+
+.winner-div,
+.loser-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-size: 1.2em;
+	top: 50%;
+}
+
+/* TODO: COMPLETE MOBILE VIEW */
+@media (min-width: 1026px) {
+	.poker-table--container {
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+		width: 1080px;
+		height: 590px;
+	}
+	
+	.pot-container {
+		margin-top: 5em;
+	}
+
+	.community-card-container{
+		margin-top: 8em;
+	}
+
+	.game-action-bar {
+		margin-bottom: 4em;
+	}
+
+	.showdown-container--wrapper {
+		padding-bottom: 8em;
+	}
+
+	.poker-table--container {
+		position: absolute;
+		margin-top: -3em;
+	}
+
+	.dealer-chip-icon-container {
+		margin-top: 1em;
+		width: 50%;
+		margin-left: .7em;
+	}
+
+}
+
+@media (max-width: 1025px) {
+	.poker-table--container {
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+		width: 1024px;
+		height: 590px;
+	}
+
+	.game-action-bar {
+		margin-bottom: 4em;
+	}
+
+	.showdown-container--wrapper {
+		padding-bottom: 8em;
+	}
+
+	.pot-container {
+		margin-top: 0;
+	}
+
+	.community-card-container{
+		margin-top: 3em;
+	}
+}
+
+@media (max-width: 769px) {
+	.poker-table--container {
+		left: 50%;
+		top: 30%;
+		transform: translate(-50%, -50%);
+		width: 750px;
+		height: 590px;
+	}
+
+	.game-action-bar {
+		margin-bottom: 4em;
+	}
+
+	.pot-container {
+		margin-top: 5em;
+	}
+
+	.community-card-container{
+		margin-top: 8em;
+		transform: scale(0.8);
+	}
+
+	.dealer-chip-icon-container {
+		margin-top: 1em;
+		width: 50%;
+		transform: scale(0.8);
+		margin-left: .7em;
+	}
+
+	.abscard, 
+	.player-entity--container {
+		transform: scale(0.8);
+	}
+
+	.p0,
+	.p1,
+	.p2,
+	.p3,
+	.p4 {
+		margin-bottom: -2em;
+	}
+
+	.p1 {
+		margin-left: -1em;
+	}
+
+	.p2 {
+		margin-left: -0.7em;
+	}
+
+	.p3 {
+		margin-right: -0.7em;
+	}
+
+	.p4 {
+		margin-right: -1em;
+	}
+
+	.showdown-container--wrapper {
+		width: auto;
+		height: auto;
+		padding-bottom: 8em;
+	}
+
+	.showdown-container--community-cards {
+		transform: scale(0.8);
+	}
+
+	.startgame--button,
+	.showdown--nextRound--button {
+		transform: scale(0.7);
+	}
+
+	.player-showdown--entity {
+		transform: scale(0.75);
+		margin: 0;
+	}
+
+}
+
+@media all and (max-width: 920px) and (orientation:landscape) 
+{
+    /* styles here */
+
+	.poker-table--container {
+
+		transform: rotate(90deg);
+		left: 50%;
+		top: -10%;
+		transform: translate(-50%, -50%);
+		width: 650px;
+		height: 590px;
+
+	}
+
+	.showdown-container--wrapper {
+		width: auto;
+		height: auto;
+		padding-bottom: 8em;
+	}
+
+
+	.abscard, 
+	.player-entity--container {
+		transform: scale(0.5);
+	}
+
+	.game-action-bar {
+		transform: scale(0.7);
+		margin-bottom: 1.5em;
+	}
+
+	.pot-container {
+		margin-top: 19em;
+	}
+
+	.community-card-container{
+		margin-top: 22em;
+		transform: scale(0.5);
+	}
+
+	.showdown-container--community-cards {
+		transform: scale(0.8);
+	}
+
+	.p0 {
+		margin-bottom: 4em;
+	}
+
+	.player-entity--container {
+		height: 2em;
+	}
+
+	.player-showdown--entity {
+		transform: scale(0.6);
+		margin: 0;
+	}
+
+	.p1,
+	.p2,
+	.p3,
+	.p4 {
+		margin-bottom: 1em;
+	}
+
+	.dealer-chip-icon-container {
+		margin-top: -10em;
+		width: 50%;
+		transform: scale(0.6);
+		margin-left: .7em;
+	}
+
+	.startgame--button,
+	.showdown--nextRound--button {
+		transform: scale(0.7);
+	}
+
+	.actionBox {
+		transform: scale(0.7);
+	}
+
+}

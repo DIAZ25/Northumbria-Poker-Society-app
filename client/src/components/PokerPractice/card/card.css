@@ -1,0 +1,87 @@
+/* 
+
+	Most Card styling CSS
+
+*/
+
+.playing-card { /* General styling + dealing animation */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-color: white;
+
+	height: 120px;
+	width: 90px;
+	margin: 0 1px;
+	border: 1px solid gray;
+	border-radius: 5px;
+
+	opacity: 0;
+	animation: fade-in-up 0.5s;
+	animation-fill-mode: both;
+}
+
+/* Visible cards styling */
+
+.card-styling { /* Flex container to display two suits and rank of card */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-styling-rank { /* Card's rank */
+	font-size: 3.3em;
+	font-weight: 500;
+	width: 50px;
+	/*border: 1px solid red;*/
+}
+
+.card-styling-suit-bottom-right { /* Bottom right suit of card */
+	margin-left: -.2em;
+	font-size: 2em;
+	margin-top: 3.4em;
+}
+
+.card-styling-suit-top-left { /* Top left suit of card */
+	margin-right: -.2em;
+	font-size: 2em;
+	margin-bottom: 3.4em;
+}
+
+/* Folded cards - disappearing after folding */
+
+.robotcard { /* Back cover of face down cards */
+	/*background-color: #890808;*/
+	background-image: url("../../../assets/card-back.svg");
+}
+
+.folded { /* Folded animation */
+	animation: fade-in-out 0.5s;
+	animation-fill-mode: both;
+}
+
+/* Card animations - dealing and folding (disappearing) */
+
+@keyframes fade-in-out {
+	0% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-100%)
+	}
+}
+
+@keyframes fade-in-up {
+	0% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}

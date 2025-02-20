@@ -1,0 +1,144 @@
+/* Player action pop up + relative animations */
+
+.actionBox {
+	/* background: rgba(0,0,0,0.85); */ 
+	color: #FDBA0A;
+	padding: .5em 1em;
+	
+	position: absolute;
+	top: -80px;
+	width: 100%;
+	left: 50%;
+	z-index: 100;
+	display: none;
+	justify-content: center;
+	border-radius: .5em;
+	font-weight: bold;
+	font-size: 1.4em;
+	background-color: whitesmoke;
+}
+
+.transitionable-actionBox-enter {
+	display: flex;
+	opacity: 1;
+	transform: translateX(-50%);
+}
+
+.transitionable-actionBox-enter-active {
+	display: flex;
+	opacity: 1;
+	transition: opacity 1250ms ease-in-out;
+	transform: translateX(-50%);
+}
+
+.transitionable-actionBox-enter-done {
+	display: flex;
+}
+
+.transitionable-actionBox-exit {
+	display: flex;
+	opacity: 1;
+	transform: translateX(-50%);
+}
+
+.transitionable-actionBox-exit-active {
+	display: flex;
+	opacity: 0.7;
+	transform: translateX(-50%) translateY(-55px);
+	transition: opacity 3250ms ease-in-out, transform 850ms linear;
+}
+
+/* Player - general container */
+.p0, .p1, .p2, .p3, .p4 {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.player-entity--container {
+	display: flex;
+}
+
+.player-info--name {
+	display: flex;
+	justify-content: center;
+	border-radius: 1.2em;
+	padding: .5em 1em;
+	position: relative;
+	top: 50%;
+	margin: 6px 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	color: whitesmoke;
+	background-color: #1f2937;
+}
+
+.activePlayer {
+	background-color: #FDBA0A;
+}
+
+.player-info--stash--container,
+.player-info--bet--container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	color: #1f2937;
+	margin-top: 5px;
+	top: 50%;
+	font-size: 1.2em;
+}
+
+/* Player positioning */
+.p0 {
+	bottom: -2%;
+	left: 50%;
+	transform: translateX(-50%) ;
+}
+
+.p1 {
+	bottom: 8%;
+	left: 26%;
+}
+
+.p2 {
+   bottom: 16%;
+	left: 5%;
+}
+
+.p4 {
+   bottom: 8%;
+   right: 26%;
+}
+
+.p3 {
+	bottom: 16%;
+	right: 5%;
+}
+
+/* Dealer/button chip container */
+.dealer-chip-icon-container { 
+   position: absolute;
+   top: -180%;
+   left: calc(50% - 25.5px);
+   height: 50px;
+   width: 50px;
+   z-index: 99;
+}
+
+/* Player cards */ 
+.centered-flex-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+}
+
+.abscard { /* Players card placement - container */
+	position: absolute;
+ 	top: -80px;
+}
+
