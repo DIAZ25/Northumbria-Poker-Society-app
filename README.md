@@ -1,8 +1,13 @@
 # TeamProject
 Team Project
 
-https://github.com/streetjohn/TeamProject - Our github
-https://gonative.io/share/ymxedd?fbclid=IwAR3klLm8_AjAF50KirZaFYQKGxh1TheaWqX0pfoY1e2a59pF6Y231V7Kxa8 - Link to download APK for android phones
+In this project, I worked on the chatbox feature and the overall front end of the pages.
+
+The following are screenshots of some pages from the app:
+![Alt Text](chatbox-ss.png)
+
+![Alt Text](login-ss.png)
+
 
 ### Setup:
 
